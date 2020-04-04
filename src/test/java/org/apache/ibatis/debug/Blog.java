@@ -1,7 +1,5 @@
 package org.apache.ibatis.debug;
 
-import org.apache.ibatis.submitted.parent_reference_3level.Post;
-
 import java.util.List;
 
 /**
@@ -11,7 +9,6 @@ import java.util.List;
 public class Blog {
   private int id;
   private String title;
-  private List<Post> posts;
 
   public int getId() {
     return id;
@@ -27,13 +24,5 @@ public class Blog {
 
   public void setTitle(String title) {
     this.title = title;
-  }
-
-  public List<Post> getPosts() {
-    return posts;
-  }
-
-  public void setPosts(List<Post> posts) {
-    this.posts = posts;
   }
 }
