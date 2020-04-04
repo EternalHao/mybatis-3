@@ -1,23 +1,31 @@
-MyBatis SQL Mapper Framework for Java
-=====================================
+> v1.0 待补充
+# 1.源码搭建环境
 
-[![Build Status](https://travis-ci.org/mybatis/mybatis-3.svg?branch=master)](https://travis-ci.org/mybatis/mybatis-3)
-[![Coverage Status](https://coveralls.io/repos/mybatis/mybatis-3/badge.svg?branch=master&service=github)](https://coveralls.io/github/mybatis/mybatis-3?branch=master)
-[![Maven central](https://maven-badges.herokuapp.com/maven-central/org.mybatis/mybatis/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.mybatis/mybatis)
-[![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.mybatis/mybatis.svg)](https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/mybatis/)
-[![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Stack Overflow](http://img.shields.io/:stack%20overflow-mybatis-brightgreen.svg)](http://stackoverflow.com/questions/tagged/mybatis)
-[![Project Stats](https://www.openhub.net/p/mybatis/widgets/project_thin_badge.gif)](https://www.openhub.net/p/mybatis)
+>首先搭建源码，你需要了解的前置知识
 
-![mybatis](http://mybatis.github.io/images/mybatis-logo.png)
+Spring官方的代码是利用Gradle这个构建工具构建的，如果不了解可以移步
+1. 【视频】 https://www.bilibili.com/video/BV1iW411C7CV?from=search&seid=14415940432123256686
+2. 【官网】https://gradle.org/
 
-The MyBatis SQL mapper framework makes it easier to use a relational database with object-oriented applications.
-MyBatis couples objects with stored procedures or SQL statements using a XML descriptor or annotations.
-Simplicity is the biggest advantage of the MyBatis data mapper over object relational mapping tools.
+## 1.1 官方文档
+官方文档这个是一定要看的，至少要看3-5编，首先你要会用，
+然后才能理解源码
+【官方】https://mybatis.org/mybatis-3/zh/index.html
 
-Essentials
-----------
+---
 
-* [See the docs](http://mybatis.github.io/mybatis-3)
-* [Download Latest](https://github.com/mybatis/mybatis-3/releases)
-* [Download Snapshot](https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/mybatis/)
+我们以往的看源码的方式，都是在没有源码的环境中看源码，这个有很多问题
+
+1. 不能添加注释
+我以前的操作一般是摘出来，然后自己添加，注释总结文档，但是老感觉不全面
+
+2. 不能修改源码
+这个在没有源码的环境的中，肯定是行不通的
+
+综合上面的考虑，我决定搭建源码调试环境
+
+我当前的实现方式一般是在源码目录下新建一个模块，例如debug，然后把我测试的代码，写在下面，然后开始debug。
+
+当然我还会把有关于解析源码的详细资料也放在我的目录下
+
+**写这个的目的就是帮助大家减少 搭建源码 已经找寻相关的资料的时间，可以把更多的时间投入到源码的阅读中来，不断的提升自己**
