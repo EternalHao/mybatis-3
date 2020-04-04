@@ -30,6 +30,7 @@ import org.apache.ibatis.reflection.wrapper.ObjectWrapperFactory;
 /**
  * @author Clinton Begin
  */
+// 使用了外观模式
 public class MetaObject {
 
   private final Object originalObject;

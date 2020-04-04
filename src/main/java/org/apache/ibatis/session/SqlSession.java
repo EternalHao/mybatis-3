@@ -257,7 +257,7 @@ public interface SqlSession extends Closeable {
   void close();
 
   /**
-   * Clears local session cache.
+   * 清除本地会话级的缓存
    */
   void clearCache();
 

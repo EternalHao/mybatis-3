@@ -45,6 +45,7 @@ public class Plugin implements InvocationHandler {
     Class<?> type = target.getClass();
     Class<?>[] interfaces = getAllInterfaces(type, signatureMap);
     if (interfaces.length > 0) {
+      // JDK 动态代理
       return Proxy.newProxyInstance(
           type.getClassLoader(),
           interfaces,
@@ -67,6 +68,7 @@ public class Plugin implements InvocationHandler {
   }
 
   private static Map<Class<?>, Set<Method>> getSignatureMap(Interceptor interceptor) {
+    // 解析 Intercepts注解
     Intercepts interceptsAnnotation = interceptor.getClass().getAnnotation(Intercepts.class);
     // issue #251
     if (interceptsAnnotation == null) {
@@ -90,6 +92,7 @@ public class Plugin implements InvocationHandler {
     Set<Class<?>> interfaces = new HashSet<>();
     while (type != null) {
       for (Class<?> c : type.getInterfaces()) {
+        // 筛选符合 @singature 注解的对象
         if (signatureMap.containsKey(c)) {
           interfaces.add(c);
         }
